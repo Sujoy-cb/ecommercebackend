@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
 app.get('/next', function(req,res){
   res.json([
     {
-      "message":"We are done"
+      message:"We are done"
     }
   ])
 })
