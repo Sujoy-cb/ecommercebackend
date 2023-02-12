@@ -3,7 +3,7 @@ const _ = express.Router
 
 
 _.get('/', function(req,res){
-    res.send("I am Router")
+    res.send("Router set is ok")
 })
 
 
