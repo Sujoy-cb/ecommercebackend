@@ -7,4 +7,4 @@ _.get('/', function(req,res){
 })
 
 
-module.exports = {_}
+module.exports = _
