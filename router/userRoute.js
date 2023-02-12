@@ -1,5 +1,5 @@
 const express = require('express')
-const _ = express.Router
+const _ = express.Router()
 
 
 _.get('/', function(req,res){
