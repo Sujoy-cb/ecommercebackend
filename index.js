@@ -19,6 +19,15 @@ app.get('/', function (req, res) {
   ])
 })
 
+
+app.get("/next", function(req,res){
+  res.json([
+    {
+      "message":"We are done"
+    }
+  ])
+})
+
 app.listen(3000, ()=>{
     console.log(chalk.red.bgGreenBright("Port Running on 3000 Now"))
 })
