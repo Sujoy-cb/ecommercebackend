@@ -1,8 +1,13 @@
+require('dotenv').config()
 const express = require('express')
 const chalk = require('chalk')
 const cors = require('cors')
-const userRouter = require('./router/userRoute')
+// const userRouter = require('./router/userRoute')
+const router = require('./router')
 const app = express()
+
+
+console.log(process.env.BASE_URL)
 
 //middleware
 app.use(express.urlencoded({extended:true}))
@@ -10,7 +15,7 @@ app.use(express.json())
 app.use(cors())
 
 
-app.use('/',userRouter)
+app.use(router)
 
 
 
