@@ -3,6 +3,7 @@ const express = require('express')
 const chalk = require('chalk')
 const cors = require('cors')
 // const userRouter = require('./router/userRoute')
+const setupDB = require("./config/dbConfig")
 const router = require('./router')
 const app = express()
 
@@ -14,7 +15,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors())
 
-
+setupDB()
 app.use(router)
 
 
