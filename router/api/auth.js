@@ -9,8 +9,11 @@ _.post('/registration',(req,res)=>{
     if(!email){
         return res.json({error: "Please enter your email"})
     }
-    if(!fullname){
-        return res.json({error: "Please enter your fullname"})
+    if(!firstName){
+        return res.json({error: "Please enter your firstName"})
+    }
+    if(!lastName){
+        return res.json({error: "Please enter your lastName"})
     }
     if(!password){
         return res.json({error: "Please enter password"})

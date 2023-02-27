@@ -1,10 +1,11 @@
 const mongoose = require("mongoose")
 
-const {Schema} = Schema
+const {Schema} = mongoose;
 
 const userSchema = new Schema({
         email:{
             type: String,
+            unique: true,
             require: true
         },
         phoneNumber:{
