@@ -1,6 +1,7 @@
 const express = require('express')
 const _ = express.Router()
-const User = require("../../models/user.js")
+const User = require('../../models/user.js')
+var jwt = require('jsonwebtoken');
 
 
 _.post('/registration',(req,res)=>{
@@ -29,7 +30,9 @@ _.post('/registration',(req,res)=>{
 
     user.save();
 
-    res.json(user);
+    let token = jwt.sign({email:user.email}, "{j&OXqQA&(Itt)j", { expiresIn: "1h"});
+
+    res.json(token);
 })
 
 

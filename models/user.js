@@ -1,8 +1,8 @@
-const mongoose = require("mongoose")
+const mongoose = require('mongoose');
 
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
         email:{
             type: String,
             unique: true,
@@ -42,7 +42,7 @@ const userSchema = new Schema({
         role:{
             type: String,
             default: "member",
-            ref:["admin", "member", "merchant"]
+            enum:["admin", "member", "merchant"]
         },
         resetPasswordToken:{
             type: String
